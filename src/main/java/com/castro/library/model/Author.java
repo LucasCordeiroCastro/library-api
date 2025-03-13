@@ -1,7 +1,7 @@
 package com.castro.library.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,6 +10,9 @@ import java.util.UUID;
 @Entity
 @Table(name = "author")
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
